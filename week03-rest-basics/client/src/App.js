@@ -7,13 +7,13 @@ class App extends Component {
         this.state = {            
             file: 'unknown',
             result: 'unknown',
-            program: 'unknown'
+            status: 'unknown'
         };
     }
 
     queryServer = () => {
         const that = this;
-        fetch('/you-rang')
+        fetch('/test-routes/foo')
             .then(function(response) {
                 return response.json();
             })
@@ -34,7 +34,7 @@ class App extends Component {
                 </div>
 
                 <p className="App-intro">
-                    result: {this.state.result} file: {this.state.file} program: {this.state.program}
+                    state: {this.state.status} file: {this.state.file}
                 </p>
                 <button onClick={this.queryServer}>Bar</button>
             </div>
