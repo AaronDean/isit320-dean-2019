@@ -36,7 +36,7 @@ class App extends Component {
                 </div>
 
                 <p className="App-intro">
-                    Main state: {this.state.status} file: {this.state.file} result: {this.state.result}<br/>
+                    Main program: {this.state.program} file: {this.state.file} result: {this.state.result}<br/>
                     Qux route: {this.state.route} server: {this.state.server} result: {this.state.result}
                 </p>
                 <button data-url="/you-rang" onClick={this.queryServer}>Main Server</button>

@@ -23,6 +23,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/test-routes', testRoutes);
+app.use('/you-rang', indexRouter);
+app.use('/qux/you-rang', indexRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
