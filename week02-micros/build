@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+docker image build -t aarondean/micro-qux .
+docker container run --name micro-qux -d -p 30027:30027 aarondean/micro-qux
+docker exec -it micro-qux /bin/bash
