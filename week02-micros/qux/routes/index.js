@@ -5,7 +5,17 @@ var router = express.Router();
 router.get('/', function(req, res) {
     'use strict';
     res.render('index', {
-        title: 'Elf-Express'
+        title: 'Qux-YourLastName'
+    });
+});
+
+router.get('/you-rang', (request, response) => {
+    response.send({
+        result: 'qux you rang',
+        server: 'qux',
+        directory: __dirname,
+        hostname: process.env.HOSTNAME,
+        home: process.env.HOME
     });
 });
 
