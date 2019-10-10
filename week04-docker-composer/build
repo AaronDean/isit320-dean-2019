@@ -1,0 +1,3 @@
+/usr/bin/evn bash
+
+docker-compose up
