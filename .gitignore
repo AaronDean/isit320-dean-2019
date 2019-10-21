@@ -1,3 +1,12 @@
+# IDE
+.idea
+.vscode
+.c9
+
+# CodeDetails
+bundle.js
+*.js.map
+
 # Logs
 logs
 *.log
