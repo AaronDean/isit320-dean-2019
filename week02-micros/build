@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cp ~/.ssh/fall2019 qux/.
 docker image build -t aarondean/micro-qux .
 docker container run --name micro-qux -d -p 30027:30027 aarondean/micro-qux
+rm qux/fall2019
 docker exec -it micro-qux /bin/bash

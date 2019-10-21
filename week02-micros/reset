@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+docker container stop micro-qux
+docker container stop micro-system-env
+docker container rm micro-qux
+docker container rm micro-system-env
+docker image rm aarondean/micro-qux:latest
+docker image rm aarondean/micro-system-env:latest
