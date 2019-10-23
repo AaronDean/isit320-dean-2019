@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+docker container stop week04-docker-composer_main_1
+docker container stop week04-docker-composer_system-environment_1
+docker container stop week04-docker-composer_route-tester_1
+
+docker container rm week04-docker-composer_main_1
+docker container rm week04-docker-composer_system-environment_1
+docker container rm week04-docker-composer_route-tester_1
+
+docker image rm week04-docker-composer_main:latest
+docker image rm week04-docker-composer_system-environment:latest
+docker image rm week04-docker-composer_route-tester:latest

@@ -1,3 +1,5 @@
-/usr/bin/evn bash
+#!/usr/bin/env bash
 
-docker-compose up
+cp ~/.ssh/fall2019 system-environment/.
+docker-compose up $1
+rm system-environment/fall2019
