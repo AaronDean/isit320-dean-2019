@@ -14,7 +14,7 @@ router.get('/system-environment/you-rang',function(req,res){
 });
 
 router.get('/system-environment/checkoutBranch',function(req,res){
-    requester('http:168.156.46.245:30028/you-rang').pipe(res);
+    requester('http:168.156.46.245:30028/getBranches').pipe(res);
 });
 
 router.get('/route-tester/you-rang',function(req,res){
