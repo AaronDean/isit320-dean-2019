@@ -11,13 +11,13 @@ router.get('/', function(req, res) {
 
 router.get('/you-rang', function(req, res){
     const rangData ={
-        "program": "route-tester",
-        "file": "routes/index.js",
-        "result": "route-tester",
-        "server": "route-tester",
-        "directory": __dirname,
-        "hostname": process.env.HOSTNAME,
-        "home": process.env.HOME
+        program: "route-tester",
+        file: "routes/index.js",
+        result: "route-tester",
+        server: "route-tester",
+        directory: __dirname,
+        hostname: process.env.HOSTNAME,
+        home: process.env.HOME
     };
     res.send(rangData);
 });

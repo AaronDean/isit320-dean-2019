@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class App extends React.Component{
+export default class YouRang extends React.Component{
     //creating an object that can be accessed later to display info that is
     //brought in from a micro service.
     constructor(props){
@@ -13,8 +13,7 @@ export default class App extends React.Component{
             directory: 'no data',
             hostname: 'no data',
             home: 'no data',
-            workingDir: 'no data',
-            branches: ['no data']
+            workingDir: 'no data'
         }
     }
     //Function that accesses the corresponding command in ./routes/index.js then
@@ -33,34 +32,7 @@ export default class App extends React.Component{
                 alert(ex);
             });
     };
-    //This function uses async and await to access ./routes/index.js then wait
-    //for a response allowing getBranches to run through its process and return
-    //the needed data ***I'm not sure at this time if asynce and await are independent
-    //of each other or if they're tied together.***
-    queryGetBranches = async () => {
-        try{
-            let response = await fetch('/system-environment/getBranches');
-            let result = await response.json();
-            console.log(result);
-            this.setState({ branches: result.branches });
-        } catch (ex) {
-            alert(ex);
-        }
-    };
-
-    //old Function query
-    /*queryCheckoutBranch = () => {
-        fetch('/system-environment/checkoutBranch')
-            .then((response) => response.json())
-            .then((result) => {
-                console.log(result);
-                const serverData = document.getElementById('sys-env-you-rang');
-                serverData.textContent = JSON.stringify(result, null, 4);
-            })
-            .catch((ex) =>{
-                alert(ex);
-            });
-    };*/
+   
 
     render(){
         return(
@@ -113,34 +85,6 @@ export default class App extends React.Component{
 
                 <button onClick={this.queryYouRang}>You Rang</button>
 
-                <h2>Get Branches</h2>
-
-                <p>
-                    Speak into the System Environment service running in a Docker
-                    container and ask it to return a list of the branches in my
-                    repository for this class.
-                </p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {this.state.branches.map((branch, index) => {
-                            return (
-                                <tr key= {index}>
-                                    <td>branch</td>
-                                    <td className='left'>{branch}</td>
-                                </tr>
-                            );
-                        })}
-                    </tbody>
-                </table>
-
-                <button onClick={this.queryGetBranches}>List Available Branches</button>
             </React.Fragment>
         );
     };

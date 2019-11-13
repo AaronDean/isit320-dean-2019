@@ -8,24 +8,31 @@
     "test": "jest"
   },
   "dependencies": {
-    "@babel/cli": "^7.6.0",
+    "@babel/cli": "^7.6.4",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "cookie-parser": "~1.4.4",
     "debug": "~4.1.1",
     "express": "~4.17.1",
-    "http-errors": "~1.7.2",
+    "http-errors": "~1.7.3",
     "morgan": "~1.9.1",
-    "pug": "2.0.3"
+    "prop-types": "^15.7.2",
+    "pug": "2.0.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-router-dom": "^5.1.2",
+    "request": "^2.88.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
+    "@babel/core": "^7.6.4",
     "@babel/plugin-transform-runtime": "^7.6.2",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
     "@babel/runtime": "^7.6.3",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "nodemon": "^1.19.4",
-    "webpack": "^4.40.0",
-    "webpack-cli": "^3.3.8"
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }

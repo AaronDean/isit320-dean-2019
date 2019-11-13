@@ -2,9 +2,9 @@
   "name": "elven-project",
   "version": "0.0.0",
   "authors": [
-    "Charlie Calvert"
+    "Aaron Dean"
   ],
-  "description": "Angular Unit Tests",
+  "description": "Docker Micro Services",
   "keywords": [],
   "license": "MIT",
   "homepage": "http://www.elvenware.com",
