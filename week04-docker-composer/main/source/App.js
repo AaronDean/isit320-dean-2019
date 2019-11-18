@@ -89,7 +89,7 @@ export default class App extends React.Component{
                         </tr>
                         <tr>
                             <td>server</td>
-                            <td className='leftbranch	no data'>{this.state.server}</td>
+                            <td className='left'>{this.state.server}</td>
                         </tr>
                         <tr>
                             <td>directory</td>
@@ -102,10 +102,9 @@ export default class App extends React.Component{
                         <tr>
                             <td>Home</td>
                             <td className='left'>{this.state.home}</td>
-                            <td className='left'>{this.state.server}</td>
                         </tr>
                         <tr>
-                            <td className='leftbranch	no data'>{this.state.workingDir}</td>
+                            <td className='left'>{this.state.workingDir}</td>
                         </tr>
                         
                     </tbody>
