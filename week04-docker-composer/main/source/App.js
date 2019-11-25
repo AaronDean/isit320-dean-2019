@@ -33,6 +33,20 @@ export default class App extends React.Component{
                 alert(ex);
             });
     };
+
+    getNewRepo = () => {
+        fetch('/system-environment/getNewRepo')
+            .then((response) => response.json())
+            .then((result) => {
+                console.log(result);
+                this.setState(result);
+            })
+            .catch((ex) =>{
+    //the object can be assessed later.
+                alert(ex);
+            });
+    };
+
     //This function uses async and await to access ./routes/index.js then wait
     //for a response allowing getBranches to run through its process and return
     //the needed data ***I'm not sure at this time if asynce and await are independent
@@ -48,20 +62,6 @@ export default class App extends React.Component{
         }
     };
 
-    //old Function query
-    /*queryCheckoutBranch = () => {
-        fetch('/system-environment/checkoutBranch')
-            .then((response) => response.json())
-            .then((result) => {
-                console.log(result);
-                const serverData = document.getElementById('sys-env-you-rang');
-                serverData.textContent = JSON.stringify(result, null, 4);
-            })
-            .catch((ex) =>{
-                alert(ex);
-            });
-    };*/
-
     render(){
         return(
             <React.Fragment>
@@ -71,7 +71,7 @@ export default class App extends React.Component{
 
                 <table>
                     <thead>
-                        <tr>Name</tr>
+                        <tr>Name</tr>console.log(e);
                         <tr>Value</tr>
                     </thead>
                     <tbody>
@@ -104,6 +104,7 @@ export default class App extends React.Component{
                             <td className='left'>{this.state.home}</td>
                         </tr>
                         <tr>
+                            <td>Working Directory</td>
                             <td className='left'>{this.state.workingDir}</td>
                         </tr>
                         
@@ -115,7 +116,7 @@ export default class App extends React.Component{
                 <h2>Get Branches</h2>
 
                 <p>
-                    Speak into the System Environment service running in a Docker
+                    Speak into the System getNewRepoEnvironment service running in a Docker
                     container and ask it to return a list of the branches in my
                     repository for this class.
                 </p>
@@ -139,7 +140,8 @@ export default class App extends React.Component{
                     </tbody>
                 </table>
 
-                <button onClick={this.queryGetBranches}>List Available Branches</button>
+                <button onClick={this.queryGetBranches}>List Available Branches</button> <br/>
+                <button onClick={this.getNewRepo}>Get Repo Names</button>
             </React.Fragment>
         );
     };

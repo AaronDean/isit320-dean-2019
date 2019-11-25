@@ -46,21 +46,7 @@ export default class App extends React.Component{
         } catch (ex) {
             alert(ex);
         }
-    };
-
-    //old Function query
-    /*queryCheckoutBranch = () => {
-        fetch('/system-environment/checkoutBranch')
-            .then((response) => response.json())
-            .then((result) => {
-                console.log(result);
-                const serverData = document.getElementById('sys-env-you-rang');
-                serverData.textContent = JSON.stringify(result, null, 4);
-            })
-            .catch((ex) =>{
-                alert(ex);
-            });
-    };*/
+    };    
 
     render(){
         return(

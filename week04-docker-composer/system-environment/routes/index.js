@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const debug = require('debug')('system-environment-index');
-const { workingDir, getBranches } = require('./exec-git');
+const { workingDir, getBranches, getNewRepo } = require('./exec-git');
 
 /* GET home page. */
 router.get('/', function(req, res) {
@@ -30,6 +30,12 @@ router.get('/getBranches',function(req, res){
     getBranches(res).catch(function(e){
         console.log(e);
     })
-})
+});
+
+router.get('/getNewRepo',function(req, res){
+    getNewRepo(res).catch(function(e){
+        console.log(e);
+    })
+});
 
 module.exports = router;

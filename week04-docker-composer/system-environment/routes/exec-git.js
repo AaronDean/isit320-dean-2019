@@ -26,5 +26,10 @@ async function getBranches(res) {
     }
 }
 
+async function getNewRepo(res) {
+    response.send({result: "success"});
+}
+
+module.exports.getNewRepo = getNewRepo;
 module.exports.getBranches = getBranches;
 module.exports.workingDir = workingDir;
