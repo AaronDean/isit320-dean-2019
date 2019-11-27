@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 export default class YouRang extends React.Component{
     //creating an object that can be accessed later to display info that is
@@ -16,19 +16,23 @@ export default class YouRang extends React.Component{
             workingDir: 'no data'
         }
     }
+
+    const [youRangData, setYouRangData] = useState(youRangInit);    
+
+    useEffect(() => { queryYouRang(); }, []);
+
     //Function that accesses the corresponding command in ./routes/index.js then
     //waits for a response from the micro service, when it receives that, puts
     //it in a .json format then console.logs it and sets it to this.setState so that
     //the object can be assessed later.
-    queryYouRang = () => {
+    const queryYouRang = () => {
         fetch('/system-environment/you-rang')
             .then((response) => response.json())
             .then((result) => {
                 console.log(result);
-                this.setState(result);
+                this.setYouRangData(result);
             })
-            .catch((ex) =>{
-    //the object can be assessed later.
+            .catch((ex) =>{    
                 alert(ex);
             });
     };
@@ -54,7 +58,7 @@ export default class YouRang extends React.Component{
                         <tr>
                             <td>file</td>
                             <td className='left'>{this.state.file}</td>
-                        </tr>
+                        </tr>git push --set-upstream origin week11
                         <tr>
                             <td>result</td>
                             <td className='left'>{this.state.result}</td>
@@ -81,8 +85,6 @@ export default class YouRang extends React.Component{
                         
                     </tbody>
                 </table>
-
-                <button onClick={this.queryYouRang}>You Rang</button>
 
             </React.Fragment>
         );
