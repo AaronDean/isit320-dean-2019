@@ -1,0 +1,41 @@
+{
+  "name": "main",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-scripts": "3.3.0",
+    "reactdom": "^2.0.0"
+  },
+  "description": "final project for isit-320-2019",
+  "main": "main.js",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server --port=30045 --mode=development",   
+    "build": "node_modules/.bin/webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AaronDean/isit320-dean-2019.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Aaron Dean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AaronDean/isit320-dean-2019/issues"
+  },
+  "homepage": "https://github.com/AaronDean/isit320-dean-2019#readme"
+}
