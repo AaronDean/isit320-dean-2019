@@ -1,16 +1,10 @@
-/**
- * Created by charlie on 11/5/16.
- */
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-window.onload = function() {
-    fetch('/system-environment/you-rang')
-        .then((response) => response.json())
-        .then((result) => {
-            console.log(result);
-            const serverData = document.getElementById('serverData');
-            serverData.textContent = JSON.stringify(result, null, 4);
-        })
-        .catch((ex) => {
-            alert(ex);
-        });
-};
+ReactDOM.render(
+    <App />, 
+    document.getElementById('root')    
+);
+
+//$(document).ready(function() {});
