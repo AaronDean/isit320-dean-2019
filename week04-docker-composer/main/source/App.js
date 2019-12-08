@@ -60,8 +60,10 @@ export default class App extends React.Component{
 
                 <table>
                     <thead>
-                        <td>Name</td>
-                        <td className='left'>Value</td>
+                        <tr>
+                            <td>Name</td>
+                            <td className='left'>Value</td>
+                        </tr>
                     </thead>
                     <tbody>
                         <tr>
